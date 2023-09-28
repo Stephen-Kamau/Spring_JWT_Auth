@@ -18,6 +18,21 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 @EnableWebSecurity
 public class SecurityConfig {
 
+
+    /*
+
+    My main issue is that I'm expecting the application to use jwt and the api/v1/login", "api/vi/register token be permited by default/
+    The app use the normal security and when I enter to any url it needs to have the password as the interface is coming which I didn't expect to.
+
+    Here is the resources I tried using/  <<<https://www.bezkoder.com/spring-boot-jwt-authentication/>>>
+
+    Incase You can help Then go ahead... The issue is only in this file when declaring the two objects for provided and entry point for auth.
+
+
+    When I try to get the two config classes am getting 'Could not autowire. No beans of 'xxxxxxxxxxx' type found.'.
+
+    I also tried creating the constructors without the used of RequiredArgsConstructor but didn't work
+     */
     private final UserAuthenticationEntryPoint userAuthenticationEntryPoint;
     private final UserAuthenticationProvider userAuthenticationProvider;
 
